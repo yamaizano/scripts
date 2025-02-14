@@ -4,7 +4,7 @@ rm -rf .repo/local_manifests/
 
 # Local TimeZone
 sudo rm -rf /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Asia/Indonesia /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Rom source repo
 repo init -u https://github.com/LineageOS-Revived/android.git -b lineage-18.1 --git-lfs
