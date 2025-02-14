@@ -12,6 +12,17 @@ echo "=================="
 echo "Repo init success"
 echo "=================="
 
+# check if whyred tree exist
+for i in "device/xiaomi/whyred" "kernel/xiaomi/whyred" "vendor/xiaomi/whyred"
+do
+    if [ -d "$i" ]; then
+        echo "Removing directory: $i"
+        rm -rf "$i"
+    else
+        echo "Directory not found: $i"
+    fi
+done
+
 # Clone local_manifests repository
 git clone -b mao https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
