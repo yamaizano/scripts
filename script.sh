@@ -13,7 +13,7 @@ echo "Repo init success"
 echo "=================="
 
 # check if whyred tree exist
-for i in "device/xiaomi/whyred" "kernel/xiaomi/whyred" "vendor/xiaomi/whyred" "packages/apps/Settings" "packages/providers/DownloadProvider" "vendor/qcom/opensource/commonsys/system/bt" "external/dng_sdk"
+for i in "device/xiaomi/whyred" "kernel/xiaomi/whyred" "vendor/xiaomi/whyred" "packages/apps/Settings" "packages/providers/DownloadProvider" "vendor/qcom/opensource/commonsys/system/bt" "external/dng_sdk" "external/chromium-webview"
 do
     if [ -d "$i" ]; then
         echo "Removing directory: $i"
