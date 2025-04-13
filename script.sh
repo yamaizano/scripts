@@ -24,7 +24,7 @@ do
 done
 
 # Clone local_manifests repository
-git clone -b mao https://github.com/yamaizano/local_manifests .repo/local_manifests
+git clone -b havoc https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
