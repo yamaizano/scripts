@@ -36,6 +36,7 @@ echo "============================"
 # Export
 export BUILD_USERNAME=izano
 export BUILD_HOSTNAME=crave
+export SKIP_ABI_CHECKS=true
 
 rm -rf "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
 git clone --depth=1 -b lineage-18.1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 
