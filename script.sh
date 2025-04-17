@@ -7,13 +7,13 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Rom source repo
-repo init -u https://github.com/Havoc-OS-Revived/android_manifest.git -b eleven --git-lfs
+repo init -u https://github.com/crdroid-security/android.git -b 11.0 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # check if whyred tree exist
-for i in "device/xiaomi/whyred" "kernel/xiaomi/whyred" "vendor/xiaomi/whyred" "packages/apps/Settings" "packages/providers/DownloadProvider" "vendor/qcom/opensource/commonsys/system/bt" "external/dng_sdk" "external/chromium-webview/patches" "external/chromium-webview"
+for i in "device/xiaomi/whyred" "kernel/xiaomi/whyred" "vendor/xiaomi/whyred"
 do
     if [ -d "$i" ]; then
         echo "Removing directory: $i"
@@ -24,7 +24,7 @@ do
 done
 
 # Clone local_manifests repository
-git clone -b havoc https://github.com/yamaizano/local_manifests .repo/local_manifests
+git clone -b crdroid https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -37,16 +37,6 @@ echo "============================"
 export BUILD_USERNAME=izano
 export BUILD_HOSTNAME=crave
 export SKIP_ABI_CHECKS=true
-
-rm -rf "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9"
-git clone --depth=1 -b lineage-18.1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 
-
-rm -rf "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"
-git clone --depth=1 -b lineage-18.1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9 prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
-
-rm -rf "prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9"
-git clone --depth=1 -b lineage-18.1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9 prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
-
 echo "======= Export Done ======"
 
 # Set up build environment
@@ -54,7 +44,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch havoc_whyred-userdebug
+lunch lineage_whyred-userdebug
 echo "============="
 
 # Make cleaninstall
