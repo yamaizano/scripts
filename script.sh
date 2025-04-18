@@ -7,7 +7,7 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Rom source repo
-repo init -u https://github.com/crdroid-security/android.git -b 11.0 --git-lfs
+repo init -u https://github.com/yamaizano/crdroid-security-android -b 11.0 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
