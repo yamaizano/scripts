@@ -7,7 +7,7 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Rom source repo
-repo init -u https://github.com/yamaizano/crdroid-security-android -b 11.0 --git-lfs
+repo init -u https://github.com/DotOS/manifest.git -b dot11
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -24,7 +24,7 @@ do
 done
 
 # Clone local_manifests repository
-git clone -b crdroid https://github.com/yamaizano/local_manifests .repo/local_manifests
+git clone -b dotos https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -44,7 +44,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_whyred-userdebug
+lunch dot_whyred-userdebug
 echo "============="
 
 # Make cleaninstall
