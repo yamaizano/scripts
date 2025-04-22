@@ -37,6 +37,9 @@ echo "============================"
 export BUILD_USERNAME=izano
 export BUILD_HOSTNAME=crave
 export SKIP_ABI_CHECKS=true
+
+rm -r external/chromium-webview
+git clone -b android-11.0.0_r48 --depth=1 https://android.googlesource.com/platform/external/chromium-webview external/chromium-webview
 echo "======= Export Done ======"
 
 # Set up build environment
