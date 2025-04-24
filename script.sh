@@ -32,6 +32,7 @@ echo "============================"
 # Sync the repositories
 rm -r external/adeb
 rm -r external/chromium-libpac
+rm -r external/chromium-webview
 rm -r external/honggfuzz
 rm -r external/jemalloc
 rm -r external/libdaemon
