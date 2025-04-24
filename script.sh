@@ -30,6 +30,30 @@ echo "Local manifest clone success"
 echo "============================"
 
 # Sync the repositories
+rm -r external/adeb
+rm -r external/chromium-libpac
+rm -r external/honggfuzz
+rm -r external/jemalloc
+rm -r external/libdaemon
+rm -r external/libunwind
+rm -r external/libunwind_llvm
+rm -r external/libvterm
+rm -r external/nfacct
+rm -r external/tinyxml
+rm -r external/u-boot
+rm -r external/v8
+rm -r frameworks/ml
+rm -r hardware/qcom/neuralnetworks/hvxservice
+rm -r packages/apps/PermissionController
+rm -r packages/apps/Terminal
+rm -r packages/modules/IPsec
+rm -r prebuilts/vndk/v27
+rm -r system/connectivity/wifilogd
+rm -r test/suite_harness
+rm -r tools/loganalysis
+rm -r tools/tradefederation/contrib
+rm -r tools/tradefederation/core
+
 /opt/crave/resync.sh
 echo "============================"
 
