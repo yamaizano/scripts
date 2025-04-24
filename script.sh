@@ -7,7 +7,7 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Rom source repo
-repo init -u https://github.com/DotOS/manifest.git -b dot11
+repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -24,18 +24,13 @@ do
 done
 
 # Clone local_manifests repository
-git clone -b dotos https://github.com/yamaizano/local_manifests .repo/local_manifests
+git clone -b LOS19.1 https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
 # Sync the repositories
-rm -r external/perfetto
-rm -r external/chromium-webview
-
 /opt/crave/resync.sh
-
-git clone -b android-11.0.0_r48 --depth=1 https://android.googlesource.com/platform/external/chromium-webview external/chromium-webview
 echo "============================"
 
 # Export
@@ -49,7 +44,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch dot_whyred-userdebug
+lunch lineage_whyred-userdebug
 echo "============="
 
 # Make cleaninstall
