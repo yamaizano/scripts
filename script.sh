@@ -24,6 +24,7 @@ do
 done
 
 # Clone local_manifests repository
+rm -r .repo/local_manifests
 git clone -b LOS19.1 https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
