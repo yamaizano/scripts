@@ -31,6 +31,8 @@ echo "Local manifest clone success"
 echo "============================"
 
 # Sync the repositories
+rm -rf prebuilts/clang/host/linux-x86
+rm -rf prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
 rm -r external/adeb
 rm -r external/chromium-libpac
 rm -r external/chromium-webview
