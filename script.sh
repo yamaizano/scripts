@@ -57,6 +57,9 @@ rm -r tools/tradefederation/contrib
 rm -r tools/tradefederation/core
 
 /opt/crave/resync.sh
+
+rm -rf hardware/xiaomi
+git clone --depth 1 -b lineage-19.1 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
 echo "============================"
 
 # Export
