@@ -7,7 +7,7 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Rom source repo
-repo init -u https://github.com/los-whyded/android.git -b lineage-20.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -25,7 +25,7 @@ done
 
 # Clone local_manifests repository
 rm -r .repo/local_manifests
-git clone -b lineage-20 https://github.com/yamaizano/local_manifests .repo/local_manifests
+git clone -b lineage-21 https://github.com/yamaizano/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
