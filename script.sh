@@ -48,7 +48,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_whyred-userdebug
+lunch lineage_whyred-ap2a-userdebug
 echo "============="
 
 # Make cleaninstall
