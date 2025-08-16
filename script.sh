@@ -1,7 +1,5 @@
 #!/bin/bash
 
-rm -rf .repo/local_manifests/
-
 # Local TimeZone
 sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -34,7 +32,7 @@ echo "============================"
 /opt/crave/resync.sh
 
 rm -rf hardware/xiaomi
-git clone --depth 1 -b lineage-20 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
+git clone --depth 1 -b lineage-21 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
 echo "============================"
 
 # Export
