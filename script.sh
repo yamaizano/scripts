@@ -33,6 +33,9 @@ echo "============================"
 
 rm -rf hardware/xiaomi
 git clone --depth 1 -b lineage-21 https://github.com/LineageOS/android_hardware_xiaomi.git hardware/xiaomi
+
+rm -rf vendor/lineage-priv/keys
+git clone --depth 1 -b master https://github.com/yamaizano/android_vendor_lineage-priv_keys.git vendor/lineage-priv/keys
 echo "============================"
 
 # Export
