@@ -48,7 +48,6 @@ echo "============================"
 # Export
 export BUILD_USERNAME=izano
 export BUILD_HOSTNAME=crave
-export SKIP_ABI_CHECKS=true
 echo "======= Export Done ======"
 
 # Set up build environment
@@ -56,7 +55,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lmodroid_whyred-ap2a-userdebug
+lunch lmodroid_whyred-ap2a-user
 echo "============="
 
 # Make cleaninstall
